@@ -13,7 +13,7 @@ versus
 
 - They have a simple interface |
 - They hide details |
-- They can be used everywhere |
+- They can be used anywhere |
 - They can be put into other boxes |
 
 ---
@@ -46,9 +46,7 @@ func TrimLeftFunc(s string, f func(rune) bool) string {
 ---
 ## Lego bricks are ...
 
-- bla
-- bli ![Box](assets/lego.png)
-- blue
+- bli ![Lego brick](assets/lego.png)
 
 ---
 ## References:
