@@ -1,4 +1,4 @@
-# Boxes Versus Lego Bricks in Go Programming
+# Boxes Versus Lego Bricks in Go
 
 ![Box](assets/box.png)
 <div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
@@ -9,7 +9,6 @@ versus
 <div>Icon made by <a href="https://www.flaticon.com/authors/coucou" title="Coucou">Coucou</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 ---
-
 ## Boxes are great
 
 ![Box](assets/box.png)
@@ -18,16 +17,45 @@ versus
 - They have a simple interface |
 - They hide details |
 - They can be used everywhere |
+- They can be put into other boxes |
 
 ---
+## Functions are like boxes
 
+```
+func TrimLeftFunc(s string, f func(rune) bool) string {
+	i := indexFunc(s, f, false)
+	if i == -1 {
+		return ""
+	}
+	return s[i:]
+}
+```
+
+- They have a simple interface |
+- They hide details |
+- They can be used everywhere |
+- They can be put into other functions |
+
+---
 ## Boxes are awful
 
+- You usually need padding for cascading |
+- If you cascade them mutiple times it's hard to find something |
+- They can't be composed |
+- I have never seen a storage built out of boxes |
+- I have even less seen a house built out of boxes |
+
+---
+## Lego bricks are ...
+
+<div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a>:</div>
+![Box](assets/lego.png)
+<div>Icon made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
 
 ---
 
 ## Procedural Programming
-![Logo](assets/call-graph.png)
 
 Note:
 A call decouples from
@@ -37,51 +65,6 @@ A call decouples from
 A procedure can be called from and reused anywhere.
 
 This is still used a lot esp. for utility functions.
-
----
-
-## Object Orientation
-![Logo](assets/class-diagram.jpg)
-
-Note:
-- A class encapsulates functionality and state.
-- Thus it decouples from other classes.
-- Inheritence creates a lot of coupling.
-- OOP works best for purely technical domains.
-- It grew strong together with GUIs.
-
----
-
-## Clean Code
-![Logo](assets/clean-code.jpg)
-
-Note:
-- Favour Composition over Inheritance
-- Separation of Concerns
-- Information Hiding Principle
-- Tell, don´t ask! (High cohesion)
-- Dependency injection
-- SOLID principles!!!
-- Single Responsibility Principle
-- Open Closed Principle: software entities should be open for extension, but closed for modification
-- Liskov Substitution Principle
-- Interface Segregation Principle: many client-specific interfaces are better than one general-purpose interface
-- Dependency Inversion Principle: one should depend upon abstractions, not concretions
-
----
-
-## Messaging
-![Logo](assets/messaging.jpg)
-
-Note:
-- Why don't we use HTTP internaly?
-- Asynchronism prevents time wise coupling (no timeout handling).
-- Persistence prevents stability wise coupling (no exponential backoff that has to be randomised, no circuit breaker).
-- Sender and receiver are decoupled with messaging.
-
----
-
-## Functional Programming
 
 ---
 
