@@ -77,15 +77,15 @@ Note:
 
 ![Simple operation](assets/simpleOp.png)
 
-- The implementation is hidden |
 - The interface is simple |
+- The implementation is hidden |
 - Inputs are on the left |
 - Outputs are on the right |
 
 ---
 ## They combine to flows
 
-![Minimal flow](assets/simleOp.png)
+![Minimal flow](assets/simpleOp.png)
 
 The combined ops look like a single op
 
