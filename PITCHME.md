@@ -7,10 +7,11 @@
 
 ![Box](assets/box.png)
 
-- They have a simple interface |
-- They hide details |
-- They can be used anywhere |
-- They can be put into other boxes |
+Note:
+- They have a simple interface
+- They hide details
+- They can be used anywhere
+- They can be put into other boxes
 
 ---
 ## Functions are like boxes
@@ -28,7 +29,7 @@ func TrimLeftFunc(s string, f func(rune) bool) string {
 - They have a simple interface |
 - They hide details |
 - They can be used everywhere |
-- They can be put into other functions |
+- They can be called from other functions |
 
 ---
 ## Boxes are awful
