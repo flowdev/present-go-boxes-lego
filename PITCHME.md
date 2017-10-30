@@ -3,7 +3,7 @@
 ![Box vs. Lego](assets/boxVsLego.png)
 
 ---
-## Boxes are great
+## Boxes are awesome
 
 ![Box](assets/box.png)
 
@@ -28,7 +28,7 @@ func TrimLeftFunc(s string, f func(rune) bool) string {
 
 - They have a simple interface |
 - They hide details |
-- They can be used everywhere |
+- They can be used anywhere |
 - They can be called from other functions |
 
 ---
@@ -55,15 +55,39 @@ func TrimLeftFunc(s string, f func(rune) bool) string {
 }
 ```
 
-- There are no no standards |
+- There are no standards |
 - Glue code is needed for combining them |
 - They can't be composed |
 - I have seen too many programs built out of fuctions |
 
 ---
-## Lego bricks are ...
+## Lego bricks are awesome
 
 ![Lego brick](assets/lego.png)
+
+Note:
+- They have a simple interface
+- They have standardized sizes and forms
+- They hide details
+- They can be used almost anywhere
+- They combine with other Lego bricks
+
+---
+## Graphical representation
+
+![Simple operation](assets/simpleOp.png)
+
+- The implementation is hidden |
+- The interface is simple |
+- Inputs are on the left |
+- Outputs are on the right |
+
+---
+## They combine to flows
+
+![Minimal flow](assets/simleOp.png)
+
+The combined ops look like a single op
 
 ---
 ## References:
