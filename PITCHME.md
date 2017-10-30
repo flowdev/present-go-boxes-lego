@@ -1,4 +1,4 @@
-# Boxes vs. Lego in Go
+# Boxes vs. Lego
 
 ![Box vs. Lego](assets/boxVsLego.png)
 
