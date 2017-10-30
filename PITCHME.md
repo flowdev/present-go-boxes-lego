@@ -1,4 +1,4 @@
-# Boxes Versus Lego Bricks in Go
+# Boxes vs. Lego in Go
 
 ![Box vs. Lego](assets/boxVsLego.png)
 
