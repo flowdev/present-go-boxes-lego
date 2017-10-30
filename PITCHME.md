@@ -1,10 +1,6 @@
 # Boxes Versus Lego Bricks in Go
 
-![Box](assets/box.png)
-
-versus
-
-![Lego brick](assets/lego.png)
+![Box vs. Lego](assets/boxVsLego.png)
 
 ---
 ## Boxes are great
