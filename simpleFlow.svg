@@ -1,0 +1,42 @@
+<?xml version="1.0" ?>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg">
+	<!-- background -->
+	<rect fill="rgb(55,155,255)" fill-opacity="1" height="60" stroke="none" stroke-opacity="1" stroke-width="0.0" width="552" x="6" y="6"/>
+
+	<!-- arrow with datatype -->
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="0" x2="102" y1="36" y2="36"/>
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="92" x2="102" y1="30" y2="36"/>
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="92" x2="102" y1="42" y2="36"/>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="12" y="20" textLength="72" lengthAdjust = "spacingAndGlyphs">string</text>
+
+	<!-- box with ports -->
+	<rect fill="rgb(255,255,255)" fill-opacity="1.0" height="48" stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" width="132" x="102" y="12" rx="10" ry="10"/>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="72" y="64" textLength="24" lengthAdjust = "spacingAndGlyphs">in</text>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="120" y="42" textLength="96" lengthAdjust = "spacingAndGlyphs">trimLeft</text>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="240" y="64" textLength="36" lengthAdjust = "spacingAndGlyphs">out</text>
+
+	<!-- arrow -->
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="234" x2="318" y1="36" y2="36"/>
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="308" x2="318" y1="30" y2="36"/>
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="308" x2="318" y1="42" y2="36"/>
+
+	<!-- 2. box with ports -->
+	<rect fill="rgb(255,255,255)" fill-opacity="1.0" height="48" stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" width="144" x="318" y="12" rx="10" ry="10"/>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="288" y="64" textLength="24" lengthAdjust = "spacingAndGlyphs">in</text>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="336" y="42" textLength="108" lengthAdjust = "spacingAndGlyphs">trimRight</text>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="468" y="64" textLength="36" lengthAdjust = "spacingAndGlyphs">out</text>
+
+	<!-- arrow with datatype -->
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="462" x2="564" y1="36" y2="36"/>
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="554" x2="564" y1="30" y2="36"/>
+	<line stroke="rgb(0,0,0)" stroke-opacity="1.0" stroke-width="2.5" x1="554" x2="564" y1="42" y2="36"/>
+	<text fill="rgb(0,0,0)" fill-opacity="1.0" font-family="monospace" font-size="16" x="480" y="20" textLength="72" lengthAdjust = "spacingAndGlyphs">string</text>
+
+	<!--
+		 Text: char = 12 x 24 (position = rect position + 18 x (12 + 24-6))
+			   that is its Y position is: Y position of rect + 12 (for inner rect space) +
+			   24 (for height of text) - 6 (to go back to the text base line)
+		 Rect: text + (2*18) x (2*12) (position = upper left corner + 6 x 12)
+			   the left and right borders of the rect are in the middle of a character (-6 or +6 respectively)
+	 -->
+</svg>

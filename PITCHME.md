@@ -80,12 +80,12 @@ Note:
 - The interface is simple |
 - It has got a standardized form |
 - The implementation is hidden |
-- It can be used almost anywhere
+- It can be used almost anywhere |
 
 ---
 ## They combine to flows
 
-![Minimal flow](assets/simpleOp.png)
+![Minimal flow](assets/simpleFlow.png)
 
 The combined ops look like a single op
 
