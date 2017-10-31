@@ -90,6 +90,36 @@ Note:
 The combined ops look like a single op
 
 ---
+## The code for operation
+
+```go
+type StringFilter func(out func(string)) (in func(string))
+```
+
+- The interface is simple |
+- It has got a standardized form |
+- The implementation is hidden |
+- It can be used almost anywhere |
+
+---
+## The code for operation
+
+```go
+type StringFilter func(out func(string)) (in func(string))
+
+func trimLeft(out func(string)) (in func(string)) {
+	in = func(s string) {
+		t := string.TrimLeft(s, " \t\r\n")
+		out(t)
+	}
+	return
+}
+```
+
+---
+## The code for flow
+
+---
 ## References:
 
 - FlowDev project: [https://github.com/flowdev](https://github.com/flowdev)
