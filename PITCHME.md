@@ -107,7 +107,7 @@ type StringFilter func(out func(string)) (in func(string))
 ```go
 type StringFilter func(out func(string)) (in func(string))
 
-func trimLeft(out func(string)) (in func(string)) {
+func TrimLeft(out func(string)) (in func(string)) {
 	in = func(s string) {
 		t := string.TrimLeft(s, " \t\r\n")
 		out(t)
@@ -118,6 +118,16 @@ func trimLeft(out func(string)) (in func(string)) {
 
 ---
 ## The code for flow
+
+![Minimal flow](assets/simpleFlow.png)
+
+```go
+func Trim(out func(string)) (in func(string)) {
+	trIn := TrimRight(out)
+	in = TrimLeft(trIn)
+	return
+}
+```
 
 ---
 ## References:
