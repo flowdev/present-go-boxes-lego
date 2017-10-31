@@ -16,7 +16,7 @@ Note:
 ---
 ## Functions are like boxes
 
-```
+```go
 func TrimLeftFunc(s string, f func(rune) bool) string {
 	i := indexFunc(s, f, false)
 	if i == -1 {
@@ -45,7 +45,7 @@ Note:
 ---
 ## Functions are like boxes
 
-```
+```go
 func TrimLeftFunc(s string, f func(rune) bool) string {
 	i := indexFunc(s, f, false)
 	if i == -1 {
@@ -78,9 +78,9 @@ Note:
 ![Simple operation](assets/simpleOp.png)
 
 - The interface is simple |
+- It has got a standardized form |
 - The implementation is hidden |
-- Inputs are on the left |
-- Outputs are on the right |
+- It can be used almost anywhere
 
 ---
 ## They combine to flows
