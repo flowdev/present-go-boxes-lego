@@ -90,7 +90,7 @@ Note:
 The combined ops look like a single op
 
 ---
-## The code for operation
+## Code for operation
 
 ```go
 type StringFilter func(out func(string)) (in func(string))
@@ -102,7 +102,7 @@ type StringFilter func(out func(string)) (in func(string))
 - It can be used almost anywhere |
 
 ---
-## The code for operation
+## Code for operation
 
 ```go
 type StringFilter func(out func(string)) (in func(string))
@@ -117,7 +117,7 @@ func TrimLeft(out func(string)) (in func(string)) {
 ```
 
 ---
-## The code for flow
+## Code for flow
 
 ![Minimal flow](assets/simpleFlow.png)
 
