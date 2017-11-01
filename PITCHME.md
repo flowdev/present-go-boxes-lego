@@ -130,6 +130,17 @@ func Trim(out func(string)) (in func(string)) {
 ```
 
 ---
+## Stacktrace
+
+---
+## Nice stuff
+
+- 'Filters' can always be squeezed between two other ops
+- Error handling without `if err != nil { ...`
+- Operations and flows independent of data type
+- Generic flows with 'holes' are possible
+
+---
 ## References:
 
 - FlowDev project: [https://github.com/flowdev](https://github.com/flowdev)
