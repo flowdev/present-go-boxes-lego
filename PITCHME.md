@@ -101,7 +101,7 @@ type StringFilter func(out func(string)) (in func(string))
 - The implementation is hidden |
 - It can be used almost anywhere |
 
----
++++
 ## Code for operation
 
 ```go
@@ -109,7 +109,7 @@ type StringFilter func(out func(string)) (in func(string))
 
 func TrimLeft(out func(string)) (in func(string)) {
 	in = func(s string) {
-		t := string.TrimLeft(s, " \t\r\n")
+		t := strings.TrimLeft(s, " \t\r\n")
 		out(t)
 	}
 	return
@@ -131,6 +131,8 @@ func Trim(out func(string)) (in func(string)) {
 
 ---
 ## Stacktrace
+
+Show code and run program in terminal.
 
 ---
 ## Nice stuff
