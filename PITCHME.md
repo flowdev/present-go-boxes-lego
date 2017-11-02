@@ -129,12 +129,8 @@ func Trim(out func(string)) (in func(string)) {
 }
 ```
 
----
-## Stacktrace
-
-Show code and run program in terminal.
-
 ---?code=cmd/trim/main.go
+## All code
 
 @[1-7](the main file has to be in package main and needs some imports)
 @[9-16](TrimLeft is really simple)
