@@ -130,9 +130,6 @@ func Trim(out func(string)) (in func(string)) {
 ```
 
 ---?code=cmd/trim/main.go
-## All code
-
-@[1-7](the main file has to be in package main and needs some imports)
 @[9-16](TrimLeft is really simple)
 @[18-28](TrimRight can panic)
 @[30-35](Trim just plugs them together)
