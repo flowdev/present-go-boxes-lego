@@ -182,8 +182,8 @@ type ErrorFilter func(out func(int),
 func ReadFile(out func(string),
 			  err func(error)) (in func(string)) {
 	in = func(s string) {
-		if content, err := ioutil.ReadFile(s); err != nil {
-			err(error)
+		if content, e := ioutil.ReadFile(s); e != nil {
+			err(e)
 			return
 		}
 		out(string(content))
@@ -195,6 +195,22 @@ func ReadFile(out func(string),
 
 ---
 ## Generic Operations
+
+```go
+func ReadFile(out func(interface{}), err func(error),
+			  getName(interface{})string,
+			  setContent(interface{}, []byte)interface{},
+			 ) (in func(interface{})) {
+	in = func(d interface{}) {
+		if b, e := ioutil.ReadFile(getName(d)); e != nil {
+			err(e)
+			return
+		}
+		out(setContent(d, b))
+	}
+	return
+}
+```
 
 ---
 ## Generic flows with 'holes'
