@@ -211,9 +211,24 @@ func ReadFile(out func(interface{}), err func(error),
 	return
 }
 ```
+... are almost the same
 
 ---
 ## Generic flows with 'holes'
+
+```go
+type StringFilter func(out func(string)) (in func(string))
+
+func Trim(out func(string),
+		  f StringFilter) (in func(string)) {
+	trIn := TrimRight(out)
+	fIn := f(trIn)
+	in = TrimLeft(fIn)
+	return
+}
+```
+
+Other forms are possible of course.
 
 ---
 ## References:
