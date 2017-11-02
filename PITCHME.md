@@ -133,7 +133,7 @@ func Trim(out func(string)) (in func(string)) {
 @[9-16](TrimLeft is really simple)
 @[18-28](TrimRight can panic)
 @[30-35](Trim just plugs them together)
-@[37-41](main runs Trim two times)
+@[37-43](main runs Trim two times)
 
 +++
 ## Stacktrace

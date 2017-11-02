@@ -6,7 +6,7 @@ import (
 	"strings"
 )
 
-// TrimLeft is trimming space at the left side of a string.
+// TrimLeft is deleting space at the left side of a string.
 func TrimLeft(out func(string)) (in func(string)) {
 	in = func(s string) {
 		t := strings.TrimLeft(s, " \t\r\n")
@@ -15,7 +15,7 @@ func TrimLeft(out func(string)) (in func(string)) {
 	return
 }
 
-// TrimRight is trimming space at the right side of a string.
+// TrimRight is removing space at the right side of a string.
 func TrimRight(out func(string)) (in func(string)) {
 	in = func(s string) {
 		t := strings.TrimRight(s, " \t\r\n")
@@ -27,7 +27,7 @@ func TrimRight(out func(string)) (in func(string)) {
 	return
 }
 
-// Trim is trimming space at both sides of a string.
+// Trim is deleting space at both sides of a string.
 func Trim(out func(string)) (in func(string)) {
 	trIn := TrimRight(out)
 	in = TrimLeft(trIn)
@@ -35,7 +35,9 @@ func Trim(out func(string)) (in func(string)) {
 }
 
 func main() {
-	in := Trim(func(s string) { fmt.Printf("Trim: `%s`\n", s) })
+	in := Trim(
+		func(s string) { fmt.Printf("Trim: `%s`\n", s) },
+	)
 	in(" abc ")
 	in(" a ")
 }
