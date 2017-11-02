@@ -134,6 +134,31 @@ func Trim(out func(string)) (in func(string)) {
 
 Show code and run program in terminal.
 
+---?code=cmd/trim/main.go
+
+@[1-7](the main file has to be in package main and needs some imports)
+@[9-16](TrimLeft is really simple)
+@[18-28](TrimRight can panic)
+@[30-35](Trim just plugs them together)
+@[37-41](main runs Trim two times)
+
++++
+## Stacktrace
+
+```
+Trim: `abc`
+panic: show us the stack trace
+
+goroutine 1 [running]:
+main.TrimRight.func1(0x4baede, 0x2)
+		.../cmd/trim/main.go:23 +0xf9
+main.TrimLeft.func1(0x4baedd, 0x3)
+		.../cmd/trim/main.go:13 +0x70
+main.main()
+		.../cmd/trim/main.go:40 +0x6e
+exit status 2
+```
+
 ---
 ## Nice stuff
 
