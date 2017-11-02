@@ -58,7 +58,7 @@ func TrimLeftFunc(s string, f func(rune) bool) string {
 - There are no standards |
 - Glue code is needed for combining them |
 - They can't be composed |
-- I have seen too many programs built out of fuctions |
+- I have seen too many programs built out of functions |
 
 ---
 ## Lego bricks are awesome
@@ -116,6 +116,10 @@ func TrimLeft(out func(string)) (in func(string)) {
 }
 ```
 
+Note:
+- The implementation is quite simple.
+- There is a little overhead but not much.
+
 ---
 ## Code for flow
 
@@ -129,11 +133,16 @@ func Trim(out func(string)) (in func(string)) {
 }
 ```
 
+Note:
+- This code doesn't contain any logic
+- It is just assemling ops
+- You won't find it at worktime
+
 ---?code=cmd/trim/main.go
-@[9-16](TrimLeft is really simple)
+@[9-16](TrimLeft is as before)
 @[18-28](TrimRight can panic)
 @[30-35](Trim just plugs them together)
-@[37-43](main runs Trim two times)
+@[37-43](main runs the flow two times)
 
 +++
 ## Stacktrace
@@ -171,6 +180,7 @@ func Trim(out func(string)) (in func(string)) {
 	return
 }
 ```
+... you can always squeeze them between two ops with the right data type
 
 ---
 ## Error handling
@@ -227,8 +237,14 @@ func Trim(out func(string),
 	return
 }
 ```
-
 Other forms are possible of course.
+
+---
+## Conclusion
+
+- The software 'Lego bricks' are more versatile than real ones |
+- They are useful at scale |
+- The rest is left to your imagination |
 
 ---
 ## References:
