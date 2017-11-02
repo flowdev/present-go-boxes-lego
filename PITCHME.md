@@ -153,10 +153,28 @@ exit status 2
 ```
 
 ---
-## Nice stuff
+## 'Filters' can always be squeezed between two other ops
 
-- 'Filters' can always be squeezed between two other ops
-- Error handling without `if err != nil { ...`
+```go
+func LogString(out func(string)) (in func(string)) {
+	in = func(s string) {
+		log.Println(s)
+		out(s)
+	}
+	return
+}
+
+func Trim(out func(string)) (in func(string)) {
+	trIn := TrimRight(out)
+	lIn := LogString(trIn)
+	in = TrimLeft(lIn)
+	return
+}
+```
+
+---
+## Error handling without `if err != nil { ...`
+
 - Operations and flows independent of data type
 - Generic flows with 'holes' are possible
 
