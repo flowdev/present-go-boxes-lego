@@ -153,7 +153,7 @@ exit status 2
 ```
 
 ---
-## 'Filters' can always be squeezed between two other ops
+## 'Filters' are very versatile
 
 ```go
 func LogString(out func(string)) (in func(string)) {
@@ -173,10 +173,30 @@ func Trim(out func(string)) (in func(string)) {
 ```
 
 ---
-## Error handling without `if err != nil { ...`
+## Error handling
 
-- Operations and flows independent of data type
-- Generic flows with 'holes' are possible
+```go
+type StringErrorFilter func(out func(string), err func(error)) (in func(string))
+
+func ReadFile(out func(string), err func(error)) (in func(string)) {
+	in = func(s string) {
+		content, err := ioutil.ReadFile(s)
+		if err != nil {
+			err(error)
+			return
+		}
+		out(string(content))
+	}
+	return
+}
+```
+... without `if err != nil { ...`
+
+---
+## Generic Operations
+
+---
+## Generic flows with 'holes'
 
 ---
 ## References:
