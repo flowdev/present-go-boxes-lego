@@ -176,12 +176,13 @@ func Trim(out func(string)) (in func(string)) {
 ## Error handling
 
 ```go
-type StringErrorFilter func(out func(string), err func(error)) (in func(string))
+type ErrorFilter func(out func(int),
+					  err func(int)) (in func(int))
 
-func ReadFile(out func(string), err func(error)) (in func(string)) {
+func ReadFile(out func(string),
+			  err func(error)) (in func(string)) {
 	in = func(s string) {
-		content, err := ioutil.ReadFile(s)
-		if err != nil {
+		if content, err := ioutil.ReadFile(s); err != nil {
 			err(error)
 			return
 		}
@@ -190,7 +191,7 @@ func ReadFile(out func(string), err func(error)) (in func(string)) {
 	return
 }
 ```
-... without `if err != nil { ...`
+... without `if err != nil { ...` on **all** levels
 
 ---
 ## Generic Operations
