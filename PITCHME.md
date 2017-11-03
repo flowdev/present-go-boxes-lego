@@ -37,6 +37,7 @@ func TrimLeftFunc(s string, f func(rune) bool) string {
 ![Mess of boxes](assets/messyBoxes.jpg)
 
 Note:
+- They aren't standardized
 - Padding is need for nesting
 - If you nest them deep enough it's hard to find something
 - They can't be composed
