@@ -187,8 +187,8 @@ func Trim(out func(string)) (in func(string)) {
 ## Error handling
 
 ```go
-type ErrorFilter func(out func(int),
-					  err func(int)) (in func(int))
+type ErrorFilter func(out func(string),
+					  err func(error)) (in func(string))
 
 func ReadFile(out func(string),
 			  err func(error)) (in func(string)) {
