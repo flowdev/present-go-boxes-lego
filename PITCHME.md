@@ -72,6 +72,7 @@ Note:
 - They hide details
 - They can be used almost anywhere
 - They combine with other Lego bricks
+- You have 2 distinct phases: build and play
 
 ---
 ## Graphical representation
@@ -143,7 +144,7 @@ Note:
 @[9-16](TrimLeft is as before)
 @[18-28](TrimRight can panic)
 @[30-35](Trim just plugs them together)
-@[37-43](main runs the flow two times)
+@[37-43](main builds and runs the flow two times)
 
 +++
 ## Stacktrace
